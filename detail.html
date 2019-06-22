@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>详情</title>
+		<!-- sui基础样式 -->
+		<link rel="stylesheet" href="css/sm.min.css">
+		<!-- 自定义样式 -->
+		<style type="text/css">
+			body{
+				background-color: #FFF;
+			}
+			.spimg{
+				width: 100%;
+			}
+			.spimg img{
+				width: 100%;
+			}
+			.detail{
+				padding: .5rem;
+			}
+			.detail p{
+				color: red;
+			}
+			.detail button{
+				width: 100%;
+				padding: .5rem;
+				color: #fff;
+				background-color: red;
+				position: fixed;
+				bottom: .2rem;
+				border:1px solid red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div>
+			<div class="spimg">
+				<img src="img/img1.jpg" />
+			</div>
+			<div class="detail">
+				<strong>小米 Redmi K20Pro </strong>
+				<p>￥2799.00</p>
+				<button>购买</button>
+			</div>
+		</div>
+		<!-- sui基础库 -->
+		<script type='text/javascript' src="js/zepto.min.js.js" charset='utf-8'></script>
+		<script type='text/javascript' src="js/sm.min.js" charset='utf-8'></script>
+		<script>
+			autoSize();
+			window.onresize = function() {
+				autoSize();
+			}
+
+			function autoSize() {
+				// 获取当前浏览器的视窗宽度，放在w中
+				var w = document.documentElement.clientWidth;
+				// 计算实际html font-size大小
+				var size = w * 100 / 375;
+				// 获取当前页面中的html标签
+				var html = document.querySelector('html');
+				// 设置字体大小样式
+				html.style.fontSize = size + 'px';
+			}
+		</script>
+	</body>
+
+</html>
