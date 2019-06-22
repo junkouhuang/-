@@ -1,110 +1,123 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <title>首页</title>
-	    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-	    <link rel="shortcut icon" href="/favicon.ico">
-	    <meta name="apple-mobile-web-app-capable" content="yes">
-	    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-	    <!-- sui基础样式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>首页</title>
+		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+		<link rel="shortcut icon" href="/favicon.ico">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<!-- sui基础样式 -->
 		<link rel="stylesheet" href="css/sm.min.css">
 		<!-- swiper轮播插件样式 -->
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/swiper.min.css" />
 		<!-- 自定义样式 -->
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
-			body{
+			body {
 				background-color: #fff;
 				overflow: auto;
 			}
-			.product_bg{
+			
+			.product_bg {
 				padding: 10px;
 				display: flex;
 				align-items: center;
 			}
-			.product_bg span{
+			
+			.product_bg span {
 				flex: 1;
 			}
-			.product_bg i{
+			
+			.product_bg i {
 				font-size: .9rem;
 			}
-			.swiper-wrapper img{
+			
+			.swiper-wrapper img {
 				width: 100%;
 			}
-			.contents{
+			
+			.contents {
 				background-color: #fff;
 				margin-bottom: 3rem;
 			}
-			.cards{
+			
+			.cards {
 				background: #fff;
-			    position: relative;
-			    border-radius: .1rem;
-			    font-size: .7rem;
+				position: relative;
+				border-radius: .1rem;
+				font-size: .7rem;
 			}
-			.card-content span{
+			
+			.card-content span {
 				margin-left: 4px;
 			}
-			.card-content span:last-child{
+			
+			.card-content span:last-child {
 				display: block;
 				color: #e4393c;
 			}
-			.bar{
+			
+			.bar {
 				position: fixed;
 			}
-			.col-50{
+			
+			.col-50 {
 				border: 1px solid #f5f5f5;
-    			margin-bottom: 10px;
+				margin-bottom: 10px;
 			}
-			.content-padded{
-			    margin: .5rem;
+			
+			.content-padded {
+				margin: .5rem;
 			}
 		</style>
 	</head>
+
 	<body>
 		<!-- Swiper -->
-	    <div class="swiper-container">
-		    <div class="swiper-wrapper">
-			    <div class="swiper-slide"><img src="img/banner1.jpg" class="slide-img"></div>
-			    <div class="swiper-slide"><img src="img/banner2.jpg" class="slide-img"></div>
-			    <div class="swiper-slide"><img src="img/banner3.jpg" class="slide-img"></div>
-		    </div>
-	    </div>
-	    <!-- 推荐商品 -->
-	    <div class="product_bg">
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="img/banner1.jpg" class="slide-img"></div>
+				<div class="swiper-slide"><img src="img/banner2.jpg" class="slide-img"></div>
+				<div class="swiper-slide"><img src="img/banner3.jpg" class="slide-img"></div>
+			</div>
+		</div>
+		<!-- 推荐商品 -->
+		<div class="product_bg">
 			<span>推荐商品</span>
 			<i class="iconfont icon-liebiao1 switch"></i>
 		</div>
-	  	<div class="contents">
-	    <!-- 这里是页面内容区 -->
-		    <div class="content-padded grid-demo" id="itemlist">
-		    	<!-- 行 -->
-			    
-		    	<!-- 行end -->
-		    </div>
-		    <!-- 加载提示符 -->
-            <div class="infinite-scroll-preloader infinite-scroll" data-distance="100">
-              	<div class="preloader"></div>
-            </div>
-	  	</div>
+		<div class="contents">
+			<!-- 这里是页面内容区 -->
+			<div class="content-padded grid-demo" id="itemlist">
+				<!-- 行 -->
+
+				<!-- 行end -->
+			</div>
+			<!-- 加载提示符 -->
+			<div class="infinite-scroll-preloader infinite-scroll" data-distance="100">
+				<div class="preloader"></div>
+			</div>
+		</div>
 		<nav class="bar bar-tab">
-		    <a class="tab-item active" href="#">
-		        <span class="icon icon-home"></span>
-		        <span class="tab-label">首页</span>
-		    </a>
-		    <a class="tab-item" href="classify.html">
-		        <span class="icon icon-app"></span>
-		        <span class="tab-label">分类</span>
-		    </a>
-		    <a class="tab-item" href="car.html">
-		        <span class="icon icon-cart"></span>
-		        <span class="tab-label">购物车</span>
-		    </a>
-		    <a class="tab-item" href="my.html">
-		        <span class="icon icon-me"></span>
-		        <span class="tab-label">我</span>
-		    </a>
+			<a class="tab-item active" href="#">
+				<span class="icon icon-home"></span>
+				<span class="tab-label">首页</span>
+			</a>
+			<a class="tab-item" href="classify.html">
+				<span class="icon icon-app"></span>
+				<span class="tab-label">分类</span>
+			</a>
+			<a class="tab-item" href="car.html">
+				<span class="icon icon-cart"></span>
+				<span class="tab-label">购物车</span>
+			</a>
+			<a class="tab-item" href="my.html">
+				<span class="icon icon-me"></span>
+				<span class="tab-label">我</span>
+			</a>
 		</nav>
 		<!-- sui基础库 -->
 		<script type='text/javascript' src="js/zepto.min.js.js" charset='utf-8'></script>
@@ -116,10 +129,10 @@
 			//首页轮播（1）
 			var swiper = new Swiper('.swiper-container', {
 				autoplay: {
-			    delay: 3000,
-			    stopOnLastSlide: false,
-			    disableOnInteraction: true,
-			    },
+					delay: 3000,
+					stopOnLastSlide: false,
+					disableOnInteraction: true,
+				},
 				navigation: {
 					nextEl: '.swiper-button-next',
 					prevEl: '.swiper-button-prev',
@@ -128,84 +141,88 @@
 					el: '.swiper-pagination',
 				}
 			});
-			
+
 			//首页列表（2）
-		    // 加载flag
-	        var loading = false;
-	        // 最多可加载的条目
-	        var maxItems = 100;
-	        // 每次加载添加多少条目
-	        var itemsPerLoad = 20;
-		    function addItems(number, lastIndex) {
-		              // 生成新条目的HTML
-		              var html = '';
-		              for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
-		                    html += '<div class="row">'
-								    html += '<div class="col-50">'
-								     html += '<div class="cards demo-card-header-pic">'
-										  html +=  '<div valign="bottom" class="card-header color-white no-border no-padding">'
-										    html +=  '<img class="card-cover" src="img/img1.jpg" alt="">'
-										  html +=  '</div>'
-										  html +=  '<div class="card-content">'
-										      html +=  '<span class="color-gray">小米 Redmi K20Pro </span>'
-										      html +=  '<span>¥2799.00 </span>'
-										  html +=  '</div>'
-										html += '</div>'
-									html += '</div>'
-						    		html += '<div class="col-50">'
-								     html += '<div class="cards demo-card-header-pic">'
-										  html +=  '<div valign="bottom" class="card-header color-white no-border no-padding">'
-										    html +=  '<img class="card-cover" src="img/img2.jpg" alt="">'
-										  html +=  '</div>'
-										  html +=  '<div class="card-content">'
-										      html +=  '<span class="color-gray">华为 HUAWEI P30 Pro  </span>'
-										      html +=  '<span>￥5488.00  </span>'
-										  html +=  '</div>'
-										html += '</div>'
-								    html +=  '</div>';
-						    html +=  '</div>';
-		              }
-		              // 添加新条目
-		              $('#itemlist').append(html);
-		
-		          }
-		      //预先加载20条
-		      addItems(itemsPerLoad, 0);
-		
-		      // 上次加载的序号
-		
-		      var lastIndex = 20;
-		
-		      // 注册'infinite'事件处理函数
-		      $(document).on('infinite', '.infinite-scroll-bottom',function() {
-		
-		          // 如果正在加载，则退出
-		          if (loading) return;
-		
-		          // 设置flag
-		          loading = true;
-		
-		          // 模拟1s的加载过程
-		          setTimeout(function() {
-		              // 重置加载flag
-		              loading = false;
-		
-		              if (lastIndex >= maxItems) {
-		                  // 加载完毕，则注销无限加载事件，以防不必要的加载
-		                  $.detachInfiniteScroll($('.infinite-scroll'));
-		                  // 删除加载提示符
-		                  $('.infinite-scroll-preloader').remove();
-		                  return;
-		              }
-		
-		              // 添加新条目
-		              addItems(itemsPerLoad, lastIndex);
-		              // 更新最后加载的序号
-		              lastIndex = $('#itemlist .row').length;
-		              //容器发生改变,如果是js滚动，需要刷新滚动
-		              $.refreshScroller();
-		          }, 1000);
-		      });
+			// 加载flag
+			var loading = false;
+			// 最多可加载的条目
+			var maxItems = 100;
+			// 每次加载添加多少条目
+			var itemsPerLoad = 20;
+
+			function addItems(number, lastIndex) {
+				// 生成新条目的HTML
+				var html = '';
+				for(var i = lastIndex + 1; i <= lastIndex + number; i++) {
+					html += '<div class="row">'
+					html += '<div class="col-50">'
+					html += '<a href="detail.html">';
+					html += '<div class="cards demo-card-header-pic">'
+					html += '<div valign="bottom" class="card-header color-white no-border no-padding">'
+					html += '<img class="card-cover" src="img/img1.jpg" alt="">'
+					html += '</div>'
+					html += '<div class="card-content">'
+					html += '<span class="color-gray">小米 Redmi K20Pro </span>'
+					html += '<span>¥2799.00 </span>'
+					html += '</div>'
+					html += '</div>'
+					html += '</div>'
+					html += '<div class="col-50">'
+					html += '<div class="cards demo-card-header-pic">'
+					html += '<div valign="bottom" class="card-header color-white no-border no-padding">'
+					html += '<img class="card-cover" src="img/img2.jpg" alt="">'
+					html += '</div>'
+					html += '<div class="card-content">'
+					html += '<span class="color-gray">华为 HUAWEI P30 Pro  </span>'
+					html += '<span>￥5488.00  </span>'
+					html += '</div>'
+					html += '</div>'
+					html += '</a>';
+					html += '</div>';
+					html += '</div>';
+				}
+				// 添加新条目
+				$('#itemlist').append(html);
+
+			}
+			//预先加载20条
+			addItems(itemsPerLoad, 0);
+
+			// 上次加载的序号
+
+			var lastIndex = 20;
+
+			// 注册'infinite'事件处理函数
+			$(document).on('infinite', '.infinite-scroll-bottom', function() {
+
+				// 如果正在加载，则退出
+				if(loading) return;
+
+				// 设置flag
+				loading = true;
+
+				// 模拟1s的加载过程
+				setTimeout(function() {
+					// 重置加载flag
+					loading = false;
+
+					if(lastIndex >= maxItems) {
+						// 加载完毕，则注销无限加载事件，以防不必要的加载
+						$.detachInfiniteScroll($('.infinite-scroll'));
+						// 删除加载提示符
+						$('.infinite-scroll-preloader').remove();
+						return;
+					}
+
+					// 添加新条目
+					addItems(itemsPerLoad, lastIndex);
+					// 更新最后加载的序号
+					lastIndex = $('#itemlist .row').length;
+					//容器发生改变,如果是js滚动，需要刷新滚动
+					$.refreshScroller();
+				}, 1000);
+			});
 		</script>
 	</body>
+
 </html>
