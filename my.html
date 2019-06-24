@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>我的</title>
+		<title>购物车</title>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 		<link rel="shortcut icon" href="/favicon.ico">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -17,132 +17,281 @@
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
 			body {
-				background-color: #f8f8f8;
+				background-color: #fff;
 				overflow: auto;
 			}
 			
-			.userbox {
-				padding: 2em 1rem;
-				background: url(img/s5.jpg) center 40% no-repeat;
-				background-size: cover;
+			.bar-tab{
 				display: flex;
 			}
 			
-			.userbox div:first-child {
-				width: 5rem;
-				height: 5rem;
+			.bar-tab .tab-item{
+				width: 2rem;
 			}
 			
-			.userbox div:last-child {
-				padding: 0 1rem;
+			/*购物车*/
+			
+			.header_search {
+				padding: 10px;
 			}
 			
-			.userbox div img {
-				border: 2px solid #fff;
-				border-radius: 50%;
-				width: calc(100%);
+			.gwc_section .gwc_con_txt {
+				background: #fff;
+				margin-bottom: 5px;
+				border-top: 1px solid #e5e5e5;
+				font-size: 14px;
 			}
 			
-			ul {
-				padding: 0;
-				margin-bottom: .5rem;
-				margin-top: .5rem;
-				list-style: none;
+			.gwc_section .gwc_con_txt .dianpu_name {
+				line-height: 40px;
+				padding: 0px 10px;
+				border-bottom: 1px solid #e5e5e5;
+				font-size: 16px;
+				font-weight: bold;
 			}
 			
-			ul li {
-				height: 2.5em;
-				margin-bottom: 2px;
-				margin-top: -1px;
-				background-color: #fff;
+			.gwc_section .gwc_con_txt .cpsx_info_num {
+				width: 100px;
+				border: 1px solid #e5e5e5;
+				margin: 0px auto;
 			}
 			
-			ul li a {
-				display: flex;
-				align-items: center;
-				color: #333;
+			.gwc_section .gwc_con_txt .cpsx_info_num a {
+				display: inline-block;
+				padding: 8px 13px;
+				text-align: center;
+				cursor: pointer;
+				color: rgba(255, 255, 255, 0);
+			}
+			
+			.gwc_section .gwc_con_txt .cpsx_info_num .num_jian {
+				border-right: 1px solid #e5e5e5;
+				background: url(../img/icons/iconfont-jian.png) no-repeat center center;
+			}
+			
+			.gwc_section .gwc_con_txt .cpsx_info_num .num_jia {
+				border-left: 1px solid #e5e5e5;
+				background: url(../img/icons/iconfont-jia.png) no-repeat center center;
+			}
+			
+			.gwc_section .gwc_con_txt .cpsx_info_num .goumaishuliang {
+				width: 35px;
+				height: 20px;
+				text-align: center;
+				border: 0px solid #e5e5e5;
+				font-size: 12px;
+				outline: none;
+			}
+			
+			.gwc_section .gwc_con_txt .cp_tit_tr td {
+				padding: 5px 0px;
+			}
+			
+			.gwc_section .gwc_con_txt .cp_num_tr td {
+				padding-bottom: 5px;
+				border-bottom: 1px solid #e5e5e5;
+			}
+			
+			.gwc_section .gwc_con_txt .cp_num_tr .delgg_td {
+				width: 35px;
+			}
+			
+			.gwc_section .gwc_con_txt .cp_num_tr .delgg_td img {
+				width: 20px;
+			}
+			
+			.gwc_section .gwc_con_txt .heji_tr td {
+				height: 30px;
+			}
+			
+			.gwc_section .gwc_con_txt .cp_img_td {
+				padding: 5px;
+			}
+			
+			.gwc_section .gwc_con_txt .cp_img_td img {
+				width: 60px;
+			}
+			
+			.gwc_section .gwc_con_txt table {
+				padding: 5px;
+				text-align: center;
+			}
+			
+			.gwc_section {
+				margin-bottom: 150px;
+			}
+			
+			.gwc_footer {
+				padding: 14px 10px;
 				width: 100%;
-				height: 2.5em;
+				background: rgba(255, 255, 255, 0.8);
+				border-top: 1px solid #e5e5e5;
+				position: fixed;
+				bottom: 40px;
+				font-size: 14px;
 			}
 			
-			ul li p {
-				flex: 1;
+			.gwc_footer p {
+				line-height: 18px;
 			}
 			
-			ul li i {
-				margin: 0 .5rem;
-				font-size: 1.2rem!important;
-			}
-			
-			ul li i:nth-child(3) {
-				color: #ccc;
-				font-size: 1rem!important;
+			.gwc_footer a {
+				display: block;
+				background: #b92120;
+				width: 80px;
+				height: 35px;
+				line-height: 35px;
+				border-radius: 5px;
+				text-align: center;
+				color: #fff;
 			}
 		</style>
 	</head>
 
 	<body>
 		<div class="contents">
-			<!-- 这里是页面内容区 -->
-			<section class="userbox">
-				<div>
-					<img src="img/user2.jpg" />
-				</div>
-				<div>
-					<p>小糖豆</p>
-					<p><b>DouDou1880372772</b></p>
-				</div>
-			</section>
-			<ul>
-				<li>
-					<a href="order.html">
-						<i class="iconfont icon-icon--copy  color-success"></i>
-						<p>
-							订单管理
-						</p>
-						<i class="iconfont icon-fanhuizuojiantouxiangzuoshangyibuxianxing"></i>
-					</a>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="order.html">
-						<i class="iconfont icon-dizhi  color-danger"></i>
-						<p>地址管理</p>
-						<i class="iconfont icon-fanhuizuojiantouxiangzuoshangyibuxianxing"></i>
-					</a>
-				</li>
-				<li>
-					<a href="order.html">
-						<i class="iconfont icon-shoucang-copy  color-primary"></i>
-						<p>商品收藏</p>
-						<i class="iconfont icon-fanhuizuojiantouxiangzuoshangyibuxianxing"></i>
-					</a>
-				</li>
-				<li>
-					<a href="order.html">
-						<i class="iconfont icon-fenxiang-copy  color-info"></i>
-						<p>分享店铺</p>
-						<i class="iconfont icon-fanhuizuojiantouxiangzuoshangyibuxianxing"></i>
-					</a>
-				</li>
-				<li>
-					<a href="order.html">
-						<i class=" iconfont icon-lianxi  color-warning"></i>
-						<p>联系买家</p>
-						<i class="iconfont icon-fanhuizuojiantouxiangzuoshangyibuxianxing"></i>
-					</a>
-				</li>
-			</ul>
-			<ul>
-				<li>
-					<a href="order.html">
-						<i class="iconfont icon-set  color-success"></i>
-						<p>设置</p>
-						<i class="iconfont icon-fanhuizuojiantouxiangzuoshangyibuxianxing"></i>
-					</a>
-				</li>
-			</ul>
+			<div data-role="page">
+				<header class="header_search">
+					<span>编辑</span>
+					<i class="iconfont icon-bianji"></i>
+				</header>
+				<section class="gwc_section">
+					<div class="gwc_con_txt">
+						<div class="dianpu_name"><input type="checkbox" /> 某某专卖店</div>
+						<div class="cplistdiv cp_list1">
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<!-- 产品信息 -->
+								<tr>
+									<td colspan="2" class="cp_img_td"><img src="img/img2.jpg" /></td>
+									<td colspan="4" align="left">2014秋季新款女装连衣裙气质修身连衣裙短裙</td>
+								</tr>
+								<tr class="cp_num_tr">
+									<td></td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥20.00</span></td>
+									<td>x1</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
+								</tr>
+								<tr class="cp_num_tr">
+									<td></td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥360.00</span></td>
+									<td>x20</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="gwc_con_txt">
+						<div class="dianpu_name"><input type="checkbox" /> 某某专卖店</div>
+						<div class="cplistdiv cp_list2">
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<!-- 产品信息 -->
+								<tr>
+									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
+									<td colspan="4" align="left">2014秋季新款女装连衣裙气质修身连衣裙短裙</td>
+								</tr>
+								<tr class="cp_num_tr">
+									<td></td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥20.00</span></td>
+									<td>x1</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></td>
+								</tr>
+								<!-- 产品信息 -->
+								<tr>
+									<td colspan="2" class="cp_img_td"><img src='img/img4.jpg' /></td>
+									<td colspan="4" align="left">2014秋季新款女装连衣裙气质修身连衣裙短裙</td>
+								</tr>
+								<tr class="cp_num_tr">
+									<td></td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥50.00</span></td>
+									<td>x1</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+
+					<div class="gwc_con_txt">
+						<div class="dianpu_name"><input type="checkbox" /> 某某专卖店</div>
+						<div class="cplistdiv cp_list2">
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<!-- 产品信息 -->
+								<tr>
+									<td colspan="2" class="cp_img_td"><img src="img/img3.jpg" /></td>
+									<td colspan="4" align="left">家具厂家供应批发淘宝热销皮床软体床双人床</td>
+								</tr>
+								<tr class="cp_num_tr">
+									<td></td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥700.00</span></td>
+									<td>x1</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
+								</tr>
+								<!-- 同一件商品不同规格 2 -->
+								<tr class="cp_tit_tr">
+									<td></td>
+									<td width="30"></td>
+									<td colspan="2" width="160"><span class="txtgray">规格：</span>红色1.8</td>
+									<td colspan="2" align="right" width="150"><span class="txtgray">￥1200.00</span> </td>
+								</tr>
+								<tr class="cp_num_tr">
+									<td></td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥1200.00</span></td>
+									<td>x1</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</section>
+				<footer class="gwc_footer">
+					<table width="100%" cellpadding="0" cellspacing="0">
+						<tr>
+							<td><input type="checkbox" onclick="allSelect();" /> 全选</td>
+							<td align="right">
+								<p>总计：<span class="txtred">￥2350.00</span></p>
+								<p class="txtfont12">不含运费：￥0.00</p>
+							</td>
+							<td align="right" width="90">
+								<a href="#">结算</a>
+							</td>
+						</tr>
+					</table>
+				</footer>
+			</div>
 		</div>
 		<nav class="bar bar-tab">
 			<a class="tab-item" href="index.html">
@@ -153,11 +302,11 @@
 				<span class="icon icon-app"></span>
 				<span class="tab-label">分类</span>
 			</a>
-			<a class="tab-item" href="car.html">
+			<a class="tab-item  active" href="car.html">
 				<span class="icon icon-cart"></span>
 				<span class="tab-label">购物车</span>
 			</a>
-			<a class="tab-item  active" href="#">
+			<a class="tab-item" href="my.html">
 				<span class="icon icon-me"></span>
 				<span class="tab-label">我</span>
 			</a>
