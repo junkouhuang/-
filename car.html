@@ -23,6 +23,7 @@
 			
 			.bar-tab{
 				display: flex;
+				position: fixed;
 			}
 			
 			.bar-tab .tab-item{
@@ -41,14 +42,6 @@
 				margin-bottom: 5px;
 				border-top: 1px solid #e5e5e5;
 				font-size: 14px;
-			}
-			
-			.gwc_section .gwc_con_txt .dianpu_name {
-				line-height: 40px;
-				padding: 0px 10px;
-				border-bottom: 1px solid #e5e5e5;
-				font-size: 16px;
-				font-weight: bold;
 			}
 			
 			.gwc_section .gwc_con_txt .cpsx_info_num {
@@ -84,22 +77,22 @@
 				outline: none;
 			}
 			
-			.gwc_section .gwc_con_txt .cp_tit_tr td {
+			.gwc_section .gwc_con_txt .cp_num_tr  {
 				padding: 5px 0px;
+			    border-top: 1px solid #e5e5e5;
+		        height: 50px;
 			}
 			
-			.gwc_section .gwc_con_txt .cp_num_tr td {
-				padding-bottom: 5px;
-				border-bottom: 1px solid #e5e5e5;
-			}
 			
 			.gwc_section .gwc_con_txt .cp_num_tr .delgg_td {
 				width: 35px;
+				display: none;
 			}
 			
-			.gwc_section .gwc_con_txt .cp_num_tr .delgg_td img {
-				width: 20px;
+			.gwc_section .gwc_con_txt .cp_num_tr .delgg_td span{
+				font-size: 20px;
 			}
+			
 			
 			.gwc_section .gwc_con_txt .heji_tr td {
 				height: 30px;
@@ -158,18 +151,17 @@
 				</header>
 				<section class="gwc_section">
 					<div class="gwc_con_txt">
-						<div class="dianpu_name"><input type="checkbox" /> 某某专卖店</div>
 						<div class="cplistdiv cp_list1">
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<!-- 产品信息 -->
 								<tr>
-									<td colspan="2" class="cp_img_td"><img src="img/img2.jpg" /></td>
-									<td colspan="4" align="left">2014秋季新款女装连衣裙气质修身连衣裙短裙</td>
+									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
+									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
 								</tr>
 								<tr class="cp_num_tr">
 									<td></td>
 									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥20.00</span></td>
+									<td><span class="txtred">￥1899.00</span></td>
 									<td>x1</td>
 									<td>
 										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
@@ -194,37 +186,32 @@
 						</div>
 					</div>
 					<div class="gwc_con_txt">
-						<div class="dianpu_name"><input type="checkbox" /> 某某专卖店</div>
-						<div class="cplistdiv cp_list2">
+						<div class="cplistdiv cp_list1">
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<!-- 产品信息 -->
 								<tr>
 									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
-									<td colspan="4" align="left">2014秋季新款女装连衣裙气质修身连衣裙短裙</td>
+									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
 								</tr>
 								<tr class="cp_num_tr">
 									<td></td>
 									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥20.00</span></td>
+									<td><span class="txtred">￥1899.00</span></td>
 									<td>x1</td>
 									<td>
 										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
 									</td>
 									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></td>
-								</tr>
-								<!-- 产品信息 -->
-								<tr>
-									<td colspan="2" class="cp_img_td"><img src='img/img4.jpg' /></td>
-									<td colspan="4" align="left">2014秋季新款女装连衣裙气质修身连衣裙短裙</td>
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
 								</tr>
 								<tr class="cp_num_tr">
 									<td></td>
 									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥50.00</span></td>
-									<td>x1</td>
+									<td><span class="txtred">￥360.00</span></td>
+									<td>x20</td>
 									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
 									</td>
 									<td class="delgg_td">
 										<a href="#"><span class="icon icon-remove"></span></a>
@@ -233,20 +220,18 @@
 							</table>
 						</div>
 					</div>
-
 					<div class="gwc_con_txt">
-						<div class="dianpu_name"><input type="checkbox" /> 某某专卖店</div>
-						<div class="cplistdiv cp_list2">
+						<div class="cplistdiv cp_list1">
 							<table width="100%" cellpadding="0" cellspacing="0">
 								<!-- 产品信息 -->
 								<tr>
-									<td colspan="2" class="cp_img_td"><img src="img/img3.jpg" /></td>
-									<td colspan="4" align="left">家具厂家供应批发淘宝热销皮床软体床双人床</td>
+									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
+									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
 								</tr>
 								<tr class="cp_num_tr">
 									<td></td>
 									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥700.00</span></td>
+									<td><span class="txtred">￥1899.00</span></td>
 									<td>x1</td>
 									<td>
 										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
@@ -255,20 +240,48 @@
 										<a href="#"><span class="icon icon-remove"></span></a>
 									</td>
 								</tr>
-								<!-- 同一件商品不同规格 2 -->
-								<tr class="cp_tit_tr">
+								<tr class="cp_num_tr">
 									<td></td>
-									<td width="30"></td>
-									<td colspan="2" width="160"><span class="txtgray">规格：</span>红色1.8</td>
-									<td colspan="2" align="right" width="150"><span class="txtgray">￥1200.00</span> </td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥360.00</span></td>
+									<td>x20</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="gwc_con_txt">
+						<div class="cplistdiv cp_list1">
+							<table width="100%" cellpadding="0" cellspacing="0">
+								<!-- 产品信息 -->
+								<tr>
+									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
+									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
 								</tr>
 								<tr class="cp_num_tr">
 									<td></td>
 									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥1200.00</span></td>
+									<td><span class="txtred">￥1899.00</span></td>
 									<td>x1</td>
 									<td>
 										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
+									</td>
+									<td class="delgg_td">
+										<a href="#"><span class="icon icon-remove"></span></a>
+									</td>
+								</tr>
+								<tr class="cp_num_tr">
+									<td></td>
+									<td><input type="checkbox" /></td>
+									<td><span class="txtred">￥360.00</span></td>
+									<td>x20</td>
+									<td>
+										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
 									</td>
 									<td class="delgg_td">
 										<a href="#"><span class="icon icon-remove"></span></a>
