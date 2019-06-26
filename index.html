@@ -20,8 +20,9 @@
 				overflow: auto;
 			}
 			/** 通知 **/
-			.notic{
-				background: rgba(0,0,0,.5);
+			
+			.notic {
+				background: rgba(0, 0, 0, .5);
 				color: #fff;
 				text-align: center;
 				position: fixed;
@@ -33,72 +34,92 @@
 				display: flex;
 				align-items: center;
 			}
-			.notic i{
+			
+			.notic i {
 				font-size: 1rem;
 			}
-			/** 底部导航 **/
-			.bar-tab{
-				display: flex;
+			/** 轮播图片**/
+			
+			.swiper-wrapper img {
+				width: 100%;
 			}
-			.bar-tab .tab-item{
-				width: 2rem;
-				margin: auto;
-			}
-			/** 商品列表 **/
+			/** 推荐商品 **/
+			
 			.product_bg {
 				padding: 10px;
 				display: flex;
 				align-items: center;
 			}
+			
 			.product_bg span {
 				flex: 1;
 			}
+			
 			.product_bg i {
 				font-size: 1rem;
 			}
-			.swiper-wrapper img {
-				width: 100%;
-			}
+			/**列表**/
+			
 			.contents {
 				background-color: #fff;
 				margin-bottom: 3rem;
 			}
-			.cards {
+			
+			.contents .cards {
 				background: #fff;
 				position: relative;
 				border-radius: .1rem;
 				font-size: .7rem;
 			}
-			.card-content{
+			
+			.contents .card-content {
 				padding-left: 10px;
 			}
-			.card-content span{
+			
+			.contents .card-content span {
 				color: #333;
 			}
-			.card-content .price{
+			
+			.contents .card-content .price {
 				display: flex;
 			}
-			.card-content .price span{
+			
+			.contents .card-content .price span {
 				color: #333;
 				flex: 1;
 			}
-			.card-content .price i{
+			
+			.contents .card-content .price i {
 				color: red;
 				font-size: 1rem;
 			}
-			.card-content .price span:last-child {
+			
+			.contents .card-content .price span:last-child {
 				display: block;
 				color: #e4393c;
 			}
-			.bar {
-				position: fixed;
+			
+			.content-padded {
+				margin: .5rem;
 			}
+			
 			.col-50 {
 				border: 1px solid #f5f5f5;
 				margin-bottom: 10px;
 			}
-			.content-padded {
-				margin: .5rem;
+			/** 底部导航 **/
+			
+			.bar {
+				position: fixed;
+			}
+			
+			.bar-tab {
+				display: flex;
+			}
+			
+			.bar-tab .tab-item {
+				width: 2rem;
+				margin: auto;
 			}
 		</style>
 	</head>
