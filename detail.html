@@ -11,57 +11,68 @@
 		<!-- 自定义样式 -->
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
-			body{
+			body {
 				background-color: #f5f5f5;
 				overflow-y: auto;
 			}
 			/** 商品图片 **/
-			.spimg{
+			
+			.spimg {
 				width: 100%;
 				background-color: #fff;
 			}
-			.spimg img{
+			
+			.spimg img {
 				width: 100%;
 			}
 			/** 品名 && 规格 **/
-			.basic{
+			
+			.basic {
 				padding: .5rem;
 				background-color: #fff;
 			}
-			.basic .spmc p{
+			
+			.basic .spmc p {
 				color: #999;
 			}
 			/** 单位 **/
-			.basic .dw{
+			
+			.basic .dw {
 				padding: .5rem 0;
 				display: flex;
 			}
-			.basic .dw .dw_item{
+			
+			.basic .dw .dw_item {
 				flex: 1;
 			}
-			.basic .dw .dw_item span{
+			
+			.basic .dw .dw_item span {
 				padding: .5rem;
-			    border: 1px solid #999;
-			    border-radius: 10px;
-			    margin-left: 1rem;
+				border: 1px solid #999;
+				border-radius: 10px;
+				margin-left: 1rem;
 			}
-			.basic .dw .dw_item .active{
+			
+			.basic .dw .dw_item .active {
 				color: red;
 				border: 1px solid red;
 			}
-			.basic .dw .price{
+			
+			.basic .dw .price {
 				color: red;
 			}
 			/** 数量 **/
-			.sl{
+			
+			.sl {
 				display: flex;
 				margin-top: .5rem;
 				padding: .5rem;
 				background-color: #fff;
 			}
-			.sl .sl_item{
+			
+			.sl .sl_item {
 				border: 1px solid #999;
-				border-radius:10px;
+				border-radius: 10px;
 				width: 6rem;
 				margin-left: 1rem;
 				margin-right: 1rem;
@@ -69,10 +80,12 @@
 				justify-content: center;
 				align-items: center;
 			}
-			.sl .sl_item i{
+			
+			.sl .sl_item i {
 				margin: auto;
 			}
-			.sl .sl_item input{
+			
+			.sl .sl_item input {
 				width: 2rem;
 				border: none;
 				text-align: center;
@@ -81,34 +94,45 @@
 				padding: .2rem;
 			}
 			/** 商品详情 **/
-			.detail{
+			
+			.detail {
 				margin-top: .5rem;
 				background-color: #fff;
 				padding: .5rem;
+				margin-bottom: 3rem;
 			}
 			/** 底部按钮 **/
-			footer{
+			
+			footer {
 				background-color: #fff;
 				padding: .5rem;
 				display: flex;
 				border-top: 1px solid #999;
+			    position: fixed;
+			    bottom: 0;
+			    width: 100%;
 			}
-			footer .total{
+			
+			footer .total {
 				flex: 1;
 			}
-			footer .total span{
+			
+			footer .total span {
 				color: red;
 			}
-			footer .btn button{
+			
+			footer .btn button {
 				padding: .2rem .5rem;
 				border-radius: 30px;
 			}
-			footer .btn button:first-child{
+			
+			footer .btn button:first-child {
 				border: 1px solid red;
 				color: red;
 				background-color: #fff;
 			}
-			footer .btn button:last-child{
+			
+			footer .btn button:last-child {
 				border: 1px solid red;
 				color: #fff;
 				background-color: red;
@@ -118,7 +142,7 @@
 
 	<body>
 		<div class="spimg">
-			<img src="img/img1.jpg"/>
+			<img src="img/img1.jpg" />
 		</div>
 		<div class="basic">
 			<div class="spmc">
@@ -128,7 +152,8 @@
 			<hr />
 			<div class="dw">
 				<span>单位</span>
-				<div class="dw_item"> <!-- 这里可以遍历单位-->
+				<div class="dw_item">
+					<!-- 这里可以遍历单位-->
 					<span class="active">件</span>
 					<span>瓶</span>
 				</div>
@@ -139,7 +164,7 @@
 			<span>数量</span>
 			<div class="sl_item">
 				<i class="iconfont icon-jiajian-"></i>
-				<input  value="1"/>
+				<input value="1" />
 				<i class="iconfont icon-jiajian-1"></i>
 			</div>
 			<span>0件</span>
