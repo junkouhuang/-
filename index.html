@@ -19,7 +19,18 @@
 				background-color: #fff;
 				overflow: auto;
 			}
-			
+			/** 通知 **/
+			.notic{
+				background: rgba(0,0,0,.5);
+				color: #fff;
+				text-align: center;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 2;
+				font-size: .8rem;
+			}
 			.bar-tab{
 				display: flex;
 			}
@@ -92,6 +103,7 @@
 	</head>
 
 	<body>
+		<div class="notic">欢迎光临 合成成商行</div>
 		<!-- Swiper -->
 		<div class="swiper-container">
 			<div class="swiper-wrapper">
