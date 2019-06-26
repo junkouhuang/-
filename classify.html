@@ -11,59 +11,38 @@
 		<!-- sui基础样式 -->
 		<link rel="stylesheet" href="css/sm.min.css">
 		<!-- 自定义样式 -->
+		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
 			body {
 				background-color: #fff;
 				overflow: auto;
 			}
 			
-			.bar-tab {
-				display: flex;
-			}
-			
-			.bar-tab .tab-item {
-				width: 2rem;
-				margin: auto;
-			}
-			
 			li {
 				list-style: none;
 			}
+			/** 搜索框**/
 			
-			h1,
-			h2,
-			h3,
-			h4,
-			h5,
-			h6,
-			ul,
-			p {
-				margin: 0px;
-				padding: 0px;
-			}
-			
-			.page-group {
-				margin-top: 50px;
-				position: relative;
+			.bar {
+				margin-bottom: 50px;
 			}
 			
 			.bar .searchbar {
-				background-color: #E6F5FC!important;
+				background-color: #E6F5FC;
 			}
+			/** content **/
 			
 			.content {
 				position: fixed;
 				height: 100%;
 				overflow: hidden;
 				background-color: #fff;
-			}
-			
-			.bar .searchbar {
-				background-color: #F2F2F2;
-			}
-			
-			.col-67 {
-				width: 66%;
+				top: 2.2rem;
 			}
 			
 			.row {
@@ -91,23 +70,6 @@
 				border-right: #E6F5FC;
 			}
 			
-			.fl {
-				display: flex;
-				width: 100%;
-				position: fixed;
-				background-color: #fff;
-			    padding: .2rem 0;
-			}
-			
-			.fl span {
-				width:7rem;
-				text-align: center;
-			}
-			
-			.fl .active {
-				color: red;
-			}
-			
 			.left-menu .menu-list {
 				margin-bottom: 2rem;
 			}
@@ -125,52 +87,66 @@
 				color: #fff;
 			}
 			
-			.con-list {
-				margin-bottom: 0.8rem;
-				border-bottom: 1px solid #f4f4f4;
+			.fl {
+				display: flex;
+				width: 100%;
+				position: fixed;
+				background-color: #fff;
+				padding: .2rem 0;
 			}
 			
-			.con-list.active {
-				box-shadow: 0px 0px 0.2rem rgba(0, 0, 0, 0.6);
+			.fl span {
+				width: 7rem;
+				text-align: center;
 			}
 			
-			.con-list:last-child {
-				margin-bottom: 0px;
+			.fl .active {
+				color: red;
+			}
+			.scroll{
+				margin-top: 2rem;
+			    height: 100%;
+    			margin-bottom: 2rem;
+			}
+			.scroll ul li{
+				display: flex;
+				align-items: center;
+			    border-top: 1px solid #f5f5f5;
+			    padding: .5rem 0;
+			}
+			.scroll ul li img{
+				height: 4rem;
+			}
+			.scroll ul li p{
+				margin: 0;
+				font-size: .7rem;
+			}
+			.scroll ul li .price{
+				display: flex;
+			}
+			.scroll ul li .price span{
+				flex: 1;
+				font-size: .7rem;
+				color: red;
+			}
+			.scroll ul li .price i{
+				font-size: 1rem;
+				color: red;
+			}
+			/** 底部导航 **/
+			
+			.bar {
+				position: fixed;
 			}
 			
-			.con-list h2 {
-				height: 2rem;
-				background-color: #f4f4f4;
-				font-size: 0.8rem;
-				color: #CE5704;
-				text-indent: 0.5rem;
-				line-height: 2rem;
+			.bar-tab {
+				display: flex;
+				margin-bottom: 0;
 			}
 			
-			.con-list h3 {
-				height: 1.5rem;
-				font-size: 0.7rem;
-				color: #3C9AD7;
-				line-height: 1.5rem;
-				text-indent: 0.5rem;
-			}
-			
-			.con-list .checkbox-wrapper {
-				padding: 0.5rem;
-				background-color: #fcfcfc;
-			}
-			
-			.con-list .checkbox-wrapper label {
-				display: inline-block;
-				margin-right: 0.5rem;
-			}
-			
-			.con-list .checkbox-wrapper label input {
-				margin-right: 0.3rem;
-			}
-			
-			.content {
-				top: 2.2rem;
+			.bar-tab .tab-item {
+				width: 2rem;
+				margin: auto;
 			}
 		</style>
 	</head>
@@ -222,195 +198,53 @@
 									<span>品牌</span>
 								</div>
 								<div class="scroll">
-									<ul class="con-list active">
+									<ul>
 										<li>
-
-											<ul>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<h2>行业标签</h2>
-											<ul>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-											</ul>
-										</li>
-										<li>
-											<h2>行业标签</h2>
-											<ul>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="con-list">
-										<li>
-											<div class="checkbox-wrapper">
-												<label for=""><input type="checkbox">酒店</label>
-												<label for=""><input type="checkbox">公寓</label>
-												<label for=""><input type="checkbox">民宿客栈</label>
-												<label for=""><input type="checkbox">农家乐</label>
-												<label for=""><input type="checkbox">青年旅社</label>
-												<label for=""><input type="checkbox">家庭旅馆</label>
-											</div>
-										</li>
-									</ul>
-									<ul class="con-list">
-										<li>
-											<div class="checkbox-wrapper">
-												<label for=""><input type="checkbox">酒店</label>
-												<label for=""><input type="checkbox">公寓</label>
-												<label for=""><input type="checkbox">民宿客栈</label>
-												<label for=""><input type="checkbox">农家乐</label>
-												<label for=""><input type="checkbox">青年旅社</label>
-												<label for=""><input type="checkbox">家庭旅馆</label>
+											<img  src="img/img1.jpg"/>
+											<div>
+												<p>蒙牛真果粒草莓味250ml</p>
+												<p>1*12瓶</p>
+												<div class="price"><span>￥120.00</span><i class="iconfont icon-gouwuchekong-copy"></i></div>
 											</div>
 										</li>
 										<li>
-											<h2>行业标签</h2>
-											<ul>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-												<li>
-													<h3>住宿</h3>
-													<div class="checkbox-wrapper">
-														<label for=""><input type="checkbox">酒店</label>
-														<label for=""><input type="checkbox">公寓</label>
-														<label for=""><input type="checkbox">民宿客栈</label>
-														<label for=""><input type="checkbox">农家乐</label>
-														<label for=""><input type="checkbox">青年旅社</label>
-														<label for=""><input type="checkbox">家庭旅馆</label>
-													</div>
-												</li>
-											</ul>
-										</li>
-									</ul>
-									<ul class="con-list">
-										<li>
-											<div class="checkbox-wrapper">
-												<label for=""><input type="checkbox">酒店</label>
-												<label for=""><input type="checkbox">公寓</label>
-												<label for=""><input type="checkbox">民宿客栈</label>
-												<label for=""><input type="checkbox">农家乐</label>
-												<label for=""><input type="checkbox">青年旅社</label>
-												<label for=""><input type="checkbox">家庭旅馆</label>
+											<img  src="img/img1.jpg"/>
+											<div>
+												<p>蒙牛真果粒草莓味250ml</p>
+												<p>1*12瓶</p>
+												<div class="price"><span>￥120.00</span><i class="iconfont icon-gouwuchekong-copy"></i></div>
 											</div>
 										</li>
-									</ul>
-									<ul class="con-list">
 										<li>
-											<div class="checkbox-wrapper">
-												<label for=""><input type="checkbox">酒店</label>
-												<label for=""><input type="checkbox">公寓</label>
-												<label for=""><input type="checkbox">民宿客栈</label>
-												<label for=""><input type="checkbox">农家乐</label>
-												<label for=""><input type="checkbox">青年旅社</label>
-												<label for=""><input type="checkbox">家庭旅馆</label>
+											<img  src="img/img1.jpg"/>
+											<div>
+												<p>蒙牛真果粒草莓味250ml</p>
+												<p>1*12瓶</p>
+												<div class="price"><span>￥120.00</span><i class="iconfont icon-gouwuchekong-copy"></i></div>
 											</div>
 										</li>
-									</ul>
-									<ul class="con-list">
 										<li>
-											<div class="checkbox-wrapper">
-												<label for=""><input type="checkbox">酒店</label>
-												<label for=""><input type="checkbox">公寓</label>
-												<label for=""><input type="checkbox">民宿客栈</label>
-												<label for=""><input type="checkbox">农家乐</label>
-												<label for=""><input type="checkbox">青年旅社</label>
-												<label for=""><input type="checkbox">家庭旅馆</label>
+											<img  src="img/img1.jpg"/>
+											<div>
+												<p>蒙牛真果粒草莓味250ml</p>
+												<p>1*12瓶</p>
+												<div class="price"><span>￥120.00</span><i class="iconfont icon-gouwuchekong-copy"></i></div>
+											</div>
+										</li>
+										<li>
+											<img  src="img/img1.jpg"/>
+											<div>
+												<p>蒙牛真果粒草莓味250ml</p>
+												<p>1*12瓶</p>
+												<div class="price"><span>￥120.00</span><i class="iconfont icon-gouwuchekong-copy"></i></div>
+											</div>
+										</li>
+										<li>
+											<img  src="img/img1.jpg"/>
+											<div>
+												<p>蒙牛真果粒草莓味250ml</p>
+												<p>1*12瓶</p>
+												<div class="price"><span>￥120.00</span><i class="iconfont icon-gouwuchekong-copy"></i></div>
 											</div>
 										</li>
 									</ul>
