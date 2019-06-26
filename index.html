@@ -51,19 +51,27 @@
 				background-color: #fff;
 				margin-bottom: 3rem;
 			}
-			
 			.cards {
 				background: #fff;
 				position: relative;
 				border-radius: .1rem;
 				font-size: .7rem;
 			}
-			
-			.card-content span {
-				margin-left: 4px;
+			.card-content span{
+				color: #333;
 			}
-			
-			.card-content span:last-child {
+			.card-content .price{
+				display: flex;
+			}
+			.card-content .price span{
+				color: #333;
+				flex: 1;
+			}
+			.card-content .price i{
+				color: red;
+				font-size: 1rem;
+			}
+			.card-content .price span:last-child {
 				display: block;
 				color: #e4393c;
 			}
@@ -170,21 +178,23 @@
 					html += '<img class="card-cover" src="img/img1.jpg" alt="">'
 					html += '</div>'
 					html += '<div class="card-content">'
-					html += '<span class="color-gray">蒙牛真果粒草莓味250ml </span>'
-					html += '<span>1*12瓶 </span>'
-					html += '<span>￥120.00 </span>'
+					html += '<span>蒙牛真果粒草莓味250ml </span>'
+					html += '<span  class="color-gray">1*12瓶 </span>'
+					html += '<div class="price"><span>￥120.00 </span><i class="iconfont icon-gouwuchekong-copy"></i></div>'
 					html += '</div>'
 					html += '</div>'
+					html += '</a>';
 					html += '</div>'
 					html += '<div class="col-50">'
+					html += '<a href="detail.html">';
 					html += '<div class="cards demo-card-header-pic">'
 					html += '<div valign="bottom" class="card-header color-white no-border no-padding">'
 					html += '<img class="card-cover" src="img/img1.jpg" alt="">'
 					html += '</div>'
 					html += '<div class="card-content">'
-					html += '<span class="color-gray">蒙牛真果粒草莓味250ml </span>'
-					html += '<span>1*12瓶 </span>'
-					html += '<span>￥120.00 </span>'
+					html += '<span>蒙牛真果粒草莓味250ml </span>'
+					html += '<span  class="color-gray">1*12瓶 </span>'
+					html += '<div class="price"><span>￥120.00 </span><i class="iconfont icon-gouwuchekong-copy"></i></div>'
 					html += '</div>'
 					html += '</div>'
 					html += '</a>';
