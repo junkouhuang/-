@@ -16,297 +16,216 @@
 		<!-- 自定义样式 -->
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
 			body {
 				background-color: #fff;
 				overflow: auto;
 			}
+			/** 头部**/
 			
-			.bar-tab{
-				display: flex;
+			header {
+				padding: .5rem;
 				position: fixed;
+				top: 0;
+				background-color: #f5f5f5;
+				width: 100%;
 			}
 			
-			.bar-tab .tab-item{
-				width: 2rem;
+			header i {
+				font-size: .8rem!important;
+			}
+			/**购物车详情**/
+			
+			.scroll {
+				padding-top: 2rem;
+				height: 100%;
+				padding-bottom: 2rem;
+			}
+			
+			.scroll ul li {
+				display: flex;
+				align-items: center;
+				border-top: 1px solid #f5f5f5;
+				padding: 1rem;
+			}
+			
+			.scroll ul li img {
+				width: 4rem;
+			}
+			
+			.scroll ul li .item {
+				width: 100%;
+			}
+			
+			.scroll ul li .item p {
+				margin: 0;
+				font-size: .7rem;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			
+			.scroll ul li .item .price {
+				display: flex;
+			}
+			
+			.scroll ul li .item .price span {
+				flex: 1;
+				font-size: .7rem;
+				color: red;
+			}
+			/** 数量 **/
+			
+			.sl {
+				display: flex;
+				background-color: #fff;
+				align-items: center;
+			}
+			
+			.sl .price {
+				color: red;
+			}
+			
+			.sl .sl_item {
+				border: 1px solid #999;
+				border-radius: 10px;
+				width: 6rem;
+				margin-left: 1rem;
+				margin-right: 1rem;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			
+			.sl .sl_item i {
 				margin: auto;
 			}
 			
-			/*购物车*/
-			
-			.header_search {
-				padding: 10px;
-			}
-			
-			.gwc_section .gwc_con_txt {
-				background: #fff;
-				margin-bottom: 5px;
-				border-top: 1px solid #e5e5e5;
-				font-size: 14px;
-			}
-			
-			.gwc_section .gwc_con_txt .cpsx_info_num {
-				width: 100px;
-				border: 1px solid #e5e5e5;
-				margin: 0px auto;
-			}
-			
-			.gwc_section .gwc_con_txt .cpsx_info_num a {
-				display: inline-block;
-				padding: 8px 13px;
+			.sl .sl_item input {
+				width: 2rem;
+				border: none;
 				text-align: center;
-				cursor: pointer;
-				color: rgba(255, 255, 255, 0);
+				border-left: 1px solid #999;
+				border-right: 1px solid #999;
+				padding: .2rem;
 			}
+			/** 底部按钮 **/
 			
-			.gwc_section .gwc_con_txt .cpsx_info_num .num_jian {
-				border-right: 1px solid #e5e5e5;
-				background: url(../img/icons/iconfont-jian.png) no-repeat center center;
-			}
-			
-			.gwc_section .gwc_con_txt .cpsx_info_num .num_jia {
-				border-left: 1px solid #e5e5e5;
-				background: url(../img/icons/iconfont-jia.png) no-repeat center center;
-			}
-			
-			.gwc_section .gwc_con_txt .cpsx_info_num .goumaishuliang {
-				width: 35px;
-				height: 20px;
-				text-align: center;
-				border: 0px solid #e5e5e5;
-				font-size: 12px;
-				outline: none;
-			}
-			
-			.gwc_section .gwc_con_txt .cp_num_tr  {
-				padding: 5px 0px;
-			    border-top: 1px solid #e5e5e5;
-		        height: 50px;
-			}
-			
-			
-			.gwc_section .gwc_con_txt .cp_num_tr .delgg_td {
-				width: 35px;
-				display: none;
-			}
-			
-			.gwc_section .gwc_con_txt .cp_num_tr .delgg_td span{
-				font-size: 20px;
-			}
-			
-			
-			.gwc_section .gwc_con_txt .heji_tr td {
-				height: 30px;
-			}
-			
-			.gwc_section .gwc_con_txt .cp_img_td {
-				padding: 5px;
-			}
-			
-			.gwc_section .gwc_con_txt .cp_img_td img {
-				width: 60px;
-			}
-			
-			.gwc_section .gwc_con_txt table {
-				padding: 5px;
-				text-align: center;
-			}
-			
-			.gwc_section {
-				margin-bottom: 150px;
-			}
-			
-			.gwc_footer {
-				padding: 14px 10px;
-				width: 100%;
-				background: rgba(255, 255, 255, 0.8);
-				border-top: 1px solid #e5e5e5;
+			footer {
+				background-color: #fff;
+				padding: .5rem;
+				display: flex;
+				border-top: 1px solid #999;
 				position: fixed;
-				bottom: 40px;
-				font-size: 14px;
+				bottom: 2.5rem;
+				width: 100%;
 			}
 			
-			.gwc_footer p {
-				line-height: 18px;
+			footer .total {
+				flex: 1;
 			}
 			
-			.gwc_footer a {
-				display: block;
-				background: #b92120;
-				width: 80px;
-				height: 35px;
-				line-height: 35px;
-				border-radius: 5px;
-				text-align: center;
+			footer .total span {
+				color: red;
+			}
+			
+			footer .btn button {
+				padding: .2rem .5rem;
+				border-radius: 30px;
+			}
+			
+			footer .btn button {
+				border: 1px solid red;
 				color: #fff;
+				background-color: red;
+			}
+			/** 底部导航 **/
+			
+			.bar {
+				position: fixed;
+			}
+			
+			.bar-tab {
+				display: flex;
+			}
+			
+			.bar-tab .tab-item {
+				width: 2rem;
+				margin: auto;
 			}
 		</style>
 	</head>
 
 	<body>
-		<div class="contents">
-			<div data-role="page">
-				<header class="header_search">
-					<span>编辑</span>
-					<i class="iconfont icon-bianji"></i>
-				</header>
-				<section class="gwc_section">
-					<div class="gwc_con_txt">
-						<div class="cplistdiv cp_list1">
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<!-- 产品信息 -->
-								<tr>
-									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
-									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥1899.00</span></td>
-									<td>x1</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥360.00</span></td>
-									<td>x20</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-							</table>
+		<header>
+			<span>编辑</span>
+			<i class="iconfont icon-bianji"></i>
+		</header>
+		<div class="scroll">
+			<ul>
+				<li>
+					<input type="checkbox" />
+					<img src="img/img1.jpg" />
+					<div class="item">
+						<p>蒙牛真果粒草莓味250ml</p>
+						<p>1*12瓶</p>
+						<div class="sl">
+							<span class="price">￥120.00</span>
+							<div class="sl_item">
+								<i class="iconfont icon-jiajian-"></i>
+								<input value="1" />
+								<i class="iconfont icon-jiajian-1"></i>
+							</div>
+							<span>0件</span>
 						</div>
 					</div>
-					<div class="gwc_con_txt">
-						<div class="cplistdiv cp_list1">
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<!-- 产品信息 -->
-								<tr>
-									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
-									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥1899.00</span></td>
-									<td>x1</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥360.00</span></td>
-									<td>x20</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-							</table>
+				</li>
+				<li>
+					<input type="checkbox" />
+					<img src="img/img1.jpg" />
+					<div class="item">
+						<p>蒙牛真果粒草莓味250ml</p>
+						<p>1*12瓶</p>
+						<div class="sl">
+							<span class="price">￥120.00</span>
+							<div class="sl_item">
+								<i class="iconfont icon-jiajian-"></i>
+								<input value="1" />
+								<i class="iconfont icon-jiajian-1"></i>
+							</div>
+							<span>0件</span>
 						</div>
 					</div>
-					<div class="gwc_con_txt">
-						<div class="cplistdiv cp_list1">
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<!-- 产品信息 -->
-								<tr>
-									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
-									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥1899.00</span></td>
-									<td>x1</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥360.00</span></td>
-									<td>x20</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-							</table>
+				</li>
+				<li>
+					<input type="checkbox" />
+					<img src="img/img1.jpg" />
+					<div class="item">
+						<p>蒙牛真果粒草莓味250ml</p>
+						<p>1*12瓶</p>
+						<div class="sl">
+							<span class="price">￥120.00</span>
+							<div class="sl_item">
+								<i class="iconfont icon-jiajian-"></i>
+								<input value="1" />
+								<i class="iconfont icon-jiajian-1"></i>
+							</div>
+							<span>0件</span>
 						</div>
 					</div>
-					<div class="gwc_con_txt">
-						<div class="cplistdiv cp_list1">
-							<table width="100%" cellpadding="0" cellspacing="0">
-								<!-- 产品信息 -->
-								<tr>
-									<td colspan="2" class="cp_img_td"><img src="img/img1.jpg" /></td>
-									<td colspan="4" align="left">OPPO K3 高通骁龙710 升降摄像头 VOOC闪充</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥1899.00</span></td>
-									<td>x1</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="1" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-								<tr class="cp_num_tr">
-									<td></td>
-									<td><input type="checkbox" /></td>
-									<td><span class="txtred">￥360.00</span></td>
-									<td>x20</td>
-									<td>
-										<div class="cpsx_info_num"><span class="iconfont icon-jiajian-">&nbsp;</span><input type="number" class="goumaishuliang" value="20" /><span class="iconfont icon-jiajian-1">&nbsp;</span></div>
-									</td>
-									<td class="delgg_td">
-										<a href="#"><span class="icon icon-remove"></span></a>
-									</td>
-								</tr>
-							</table>
-						</div>
-					</div>
-				</section>
-				<footer class="gwc_footer">
-					<table width="100%" cellpadding="0" cellspacing="0">
-						<tr>
-							<td><input type="checkbox" onclick="allSelect();" /> 全选</td>
-							<td align="right">
-								<p>总计：<span class="txtred">￥2350.00</span></p>
-								<p class="txtfont12">不含运费：￥0.00</p>
-							</td>
-							<td align="right" width="90">
-								<a href="#">结算</a>
-							</td>
-						</tr>
-					</table>
-				</footer>
-			</div>
+				</li>
+			</ul>
 		</div>
+		<footer>
+			<div class="total">总价：<span>￥560</span></div>
+			<div class="btn">
+				<button>立即支付</button>
+			</div>
+		</footer>
 		<nav class="bar bar-tab">
 			<a class="tab-item" href="index.html">
 				<span class="icon icon-home"></span>
