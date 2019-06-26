@@ -17,15 +17,14 @@
 				overflow: auto;
 			}
 			
-			.bar-tab{
+			.bar-tab {
 				display: flex;
 			}
 			
-			.bar-tab .tab-item{
+			.bar-tab .tab-item {
 				width: 2rem;
 				margin: auto;
 			}
-			
 			
 			li {
 				list-style: none;
@@ -84,11 +83,29 @@
 				height: 100%;
 				min-height: 100%;
 				overflow: auto;
+				position: relative;
 			}
 			
 			.left-menu {
 				background-color: #E6F5FC;
 				border-right: #E6F5FC;
+			}
+			
+			.fl {
+				display: flex;
+				width: 100%;
+				position: fixed;
+				background-color: #fff;
+			    padding: .2rem 0;
+			}
+			
+			.fl span {
+				width:7rem;
+				text-align: center;
+			}
+			
+			.fl .active {
+				color: red;
 			}
 			
 			.left-menu .menu-list {
@@ -176,7 +193,8 @@
 					<div class="content grid-demo">
 						<div class="row no-gutter">
 							<div class="col-30 left-menu">
-								<ul class="menu-list"><!--可循环-->
+								<ul class="menu-list">
+									<!--可循环-->
 									<li class="active">矿泉水系列</li>
 									<li>奶制品系列</li>
 									<li>啤酒系列</li>
@@ -199,10 +217,14 @@
 								</ul>
 							</div>
 							<div class="col-70 right-con">
+								<div class="fl">
+									<span class="active">分类</span>
+									<span>品牌</span>
+								</div>
 								<div class="scroll">
 									<ul class="con-list active">
 										<li>
-											<h2>行业标签</h2>
+
 											<ul>
 												<li>
 													<h3>住宿</h3>
