@@ -211,20 +211,26 @@
 				//更改数量
 				$("#sub").on("click", function() {
 					if(sl > 0) {
-						sl = sl - 1;
+						sl = parseInt($("#sl").val()) - 1;
 						$("#sl").val(sl)
 						$("#choose").text(sl + "件")
 					}
 				})
 				$("#add").on("click", function() {
-					sl = sl + 1;
+					sl = parseInt($("#sl").val()) + 1;
 					$("#sl").val(sl)
 					$("#choose").text(sl + "件")
 				})
 				$("#sl").on("keyup", function() {
-					sl = parseFloat($("#sl").val());
-					$("#sl").val(sl)
-					$("#choose").text(sl + "件")
+					sl=$("#sl").val();
+					if(sl==""){
+						$("#sl").val(0)
+						$("#choose").text(0 + "件")
+					}else{
+						sl = parseInt(sl);
+						$("#sl").val(sl)
+						$("#choose").text(sl + "件")
+					}
 				})
 				//支付
 				$("#pay").on("click",function(){
