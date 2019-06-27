@@ -6,11 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>详情</title>
-		<!-- sui基础样式 -->
-		<link rel="stylesheet" href="css/sm.min.css">
 		<!-- 自定义样式 -->
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
 			html{
 				font-size: 20px!important;
 			}
@@ -37,11 +39,12 @@
 			
 			.basic .spmc p {
 				color: #999;
+			    margin: 1rem 0;
 			}
 			/** 单位 **/
 			
 			.basic .dw {
-				padding: .5rem 0;
+				padding: 1rem 0;
 				display: flex;
 			}
 			
@@ -95,7 +98,7 @@
 				text-align: center;
 				border-left: 1px solid #999;
 				border-right: 1px solid #999;
-				padding: .2rem;
+				padding: .5rem;
 			}
 			/** 商品详情 **/
 			
@@ -109,12 +112,13 @@
 			
 			footer {
 				background-color: #fff;
-				padding: .5rem;
+				padding: .5rem 0;
 				display: flex;
 				border-top: 1px solid #999;
 			    position: fixed;
 			    bottom: 0;
 			    width: 100%;
+			    align-items: center;
 			}
 			
 			footer .total {
@@ -126,8 +130,9 @@
 			}
 			
 			footer .btn button {
-				padding: .2rem .5rem;
+				padding: .3rem .6rem;
 				border-radius: 30px;
+				font-size: 1rem;
 			}
 			
 			footer .btn button:first-child {
