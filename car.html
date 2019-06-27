@@ -11,8 +11,6 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<!-- sui基础样式 -->
 		<link rel="stylesheet" href="css/sm.min.css">
-		<!-- swiper轮播插件样式 -->
-		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/swiper.min.css" />
 		<!-- 自定义样式 -->
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
@@ -60,6 +58,22 @@
 				width: 100%;
 			}
 			
+			.scroll ul li .item  .spmc{
+				display: flex;
+			}
+			.scroll ul li .item  .spmc span:first-child {
+				width: 90%;
+			}
+			.scroll ul li .item  .spmc span:last-child {
+			    background-color: #f5f5f5;
+			    border-radius: 100%;
+			    width: 30px;
+			    height: 30px;
+			    text-align: center;
+			}
+			.scroll ul li .item  .spmc span i {
+			   font-size: 1rem;
+			}
 			.scroll ul li .item p {
 				margin: 0;
 				font-size: .7rem;
@@ -170,7 +184,7 @@
 					<input type="checkbox" />
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<p>蒙牛真果粒草莓味250ml</p>
+						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
@@ -186,7 +200,7 @@
 					<input type="checkbox" />
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<p>蒙牛真果粒草莓味250ml</p>
+						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
@@ -202,7 +216,7 @@
 					<input type="checkbox" />
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<p>蒙牛真果粒草莓味250ml</p>
+						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
