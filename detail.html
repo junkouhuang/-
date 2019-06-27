@@ -175,7 +175,7 @@
 			</div>
 			<div class="dw">
 				<span>单位</span>
-				<div class="dw_item">
+				<div class="dw_item" id="dw">
 					<!-- 这里可以遍历单位-->
 					<span class="active">件</span>
 					<span>瓶</span>
@@ -207,6 +207,11 @@
 		<script type='text/javascript' src="js/sm.min.js" charset='utf-8'></script>
 		<script>
 			$(function() {
+				//单位
+				$("#dw span").on("click",function(){
+					$("#dw span").removeClass("active");
+					$(this).addClass("active");
+				})
 				var sl = 0;
 				//更改数量
 				$("#sub").on("click", function() {
