@@ -212,7 +212,7 @@
 					$("#dw span").removeClass("active");
 					$(this).addClass("active");
 					$("#sl").val(0)
-					$("#choose").text(0 + "件")
+					$("#choose").text(0 + $(this).text())
 				})
 				var sl = 0;
 				//更改数量
@@ -220,23 +220,23 @@
 					if(sl > 0) {
 						sl = parseInt($("#sl").val()) - 1;
 						$("#sl").val(sl)
-						$("#choose").text(sl + "件")
+						$("#choose").text(sl + $("#dw .active").text())
 					}
 				})
 				$("#add").on("click", function() {
 					sl = parseInt($("#sl").val()) + 1;
 					$("#sl").val(sl)
-					$("#choose").text(sl + "件")
+					$("#choose").text(sl + $("#dw .active").text())
 				})
 				$("#sl").on("keyup", function() {
 					sl=$("#sl").val();
 					if(sl==""){
 						$("#sl").val(0)
-						$("#choose").text(0 + "件")
+						$("#choose").text(0 + $("#dw .active").text())
 					}else{
 						sl = parseInt(sl);
 						$("#sl").val(sl)
-						$("#choose").text(sl + "件")
+						$("#choose").text(sl + $("#dw .active").text())
 					}
 				})
 				//加入购物车
