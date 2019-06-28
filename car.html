@@ -316,13 +316,14 @@
 					$("#deleteAll").css("display","none")
 				})
 				//删除单个商品
-				$(".delete").each(function(){
+				$(".delete").each(function(e){
 					$(this).on("click",function(){
-						
+						$("#spitem li").eq(0).remove();
+						$.toast("删除成功");
 					})
 				})
 				//删除全部商品
-				$("deleteAll").on("click",function(){
+				$("#deleteAll").on("click",function(){
 					$("#spitem").html("");
 				})
 				//全选
