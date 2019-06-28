@@ -234,9 +234,9 @@
 						<div class="sl">
 							<span class="price">￥120.00</span>
 							<div class="sl_item">
-								<i class="iconfont icon-jiajian-"></i>
-								<input value="1" type="number" />
-								<i class="iconfont icon-jiajian-1"></i>
+								<i class="iconfont icon-jiajian- sub"></i>
+								<input value="1" type="number" class="amount"/>
+								<i class="iconfont icon-jiajian-1 add"></i>
 							</div>
 						</div>
 					</div>
@@ -250,9 +250,9 @@
 						<div class="sl">
 							<span class="price">￥120.00</span>
 							<div class="sl_item">
-								<i class="iconfont icon-jiajian-"></i>
-								<input value="1" type="number" />
-								<i class="iconfont icon-jiajian-1"></i>
+								<i class="iconfont icon-jiajian- sub"></i>
+								<input value="1" type="number" class="amount"/>
+								<i class="iconfont icon-jiajian-1 add"></i>
 							</div>
 						</div>
 					</div>
@@ -266,9 +266,9 @@
 						<div class="sl">
 							<span class="price">￥120.00</span>
 							<div class="sl_item">
-								<i class="iconfont icon-jiajian-"></i>
-								<input value="1" type="number" />
-								<i class="iconfont icon-jiajian-1"></i>
+								<i class="iconfont icon-jiajian- sub"></i>
+								<input value="1" type="number" class="amount"/>
+								<i class="iconfont icon-jiajian-1 add"></i>
 							</div>
 						</div>
 					</div>
@@ -392,6 +392,22 @@
 						} else {
 							$("#selectall").find("input").prop("checked", false)
 						}
+					})
+				})
+				var sl = 0;
+				//修改数量
+				$(".sub").each(function(){
+					$(this).on("click",function(){
+						if(sl > 0) {
+							sl = parseInt($(this).siblings('input').val()) - 1;
+							$(this).siblings('input').val(sl)
+						}
+					})
+				})
+				$(".add").each(function(){
+					$(this).on("click",function(){
+						sl = parseInt($(this).siblings('input').val()) + 1;
+						$(this).siblings('input').val(sl)
 					})
 				})
 			})
