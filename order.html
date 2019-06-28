@@ -10,7 +10,8 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<!-- sui基础样式 -->
 		<link rel="stylesheet" href="css/sm.min.css">
-		<!-- 自定义样式 -->
+		<!-- 自定义图标样式 -->
+		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
 			html{
 				font-size: 20px!important;
@@ -42,6 +43,7 @@
 			
 			.item .right .spmc {
 				width: 70%;
+			    padding: .2rem;
 			}
 			
 			.item .right .spmc p{
@@ -51,6 +53,19 @@
 			.item .right .spxq {
 				width: 30%;
 				text-align: right;
+			}
+			
+			.item .right .spxq .delete{
+				background-color: #f5f5f5;
+			    border-radius: 100%;
+			    width: 30px;
+			    height: 30px;
+			    text-align: center;
+			    display: inline-block;
+			}
+			.item .right .spxq .delete i{
+			    font-size: 1rem;
+				color: red;
 			}
 			
 			.item .right .spxq button {
@@ -82,7 +97,9 @@
 								<p>1*12瓶</p>
 							</div>
 							<div class="spxq">
-								<span class="icon icon-remove"></span>
+								<span class="delete">
+									<i class="iconfont icon-shanchu"></i>
+								</span>
 								<p>￥39.5</p>
 								<button>去支付</button>
 							</div>
@@ -98,7 +115,9 @@
 								<p>1*12瓶</p>
 							</div>
 							<div class="spxq">
-								<span class="icon icon-remove"></span>
+								<span class="delete">
+									<i class="iconfont icon-shanchu"></i>
+								</span>
 								<p>￥120.00</p>
 								<button>再次购买</button>
 							</div>
@@ -116,7 +135,9 @@
 								<p>1*12瓶</p>
 							</div>
 							<div class="spxq">
-								<span class="icon icon-remove"></span>
+								<span class="delete">
+									<i class="iconfont icon-shanchu"></i>
+								</span>
 								<p>￥39.5</p>
 								<button>去支付</button>
 							</div>
@@ -134,7 +155,9 @@
 								<p>1*12瓶</p>
 							</div>
 							<div class="spxq">
-								<span class="icon icon-remove"></span>
+								<span class="delete">
+									<i class="icon icon-remove"></i>
+								</span>
 								<p>￥120.00</p>
 								<button>再次购买</button>
 							</div>
@@ -148,21 +171,13 @@
 		<script type='text/javascript' src="js/zepto.min.js.js" charset='utf-8'></script>
 		<script type='text/javascript' src="js/sm.min.js" charset='utf-8'></script>
 		<script>
-			autoSize();
-			window.onresize = function() {
-				autoSize();
-			}
-
-			function autoSize() {
-				// 获取当前浏览器的视窗宽度，放在w中
-				var w = document.documentElement.clientWidth;
-				// 计算实际html font-size大小
-				var size = w * 100 / 375;
-				// 获取当前页面中的html标签
-				var html = document.querySelector('html');
-				// 设置字体大小样式
-				html.style.fontSize = size + 'px';
-			}
+			$(function(){
+				$(".delete").each(function(){
+					$(this).on("click",function(){
+						$(this).parents(".item").remove();
+					})
+				})
+			})
 		</script>
 	</body>
 
