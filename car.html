@@ -220,7 +220,7 @@
 					<input type="checkbox" name="checkbox"/>
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
+						<view class="spmc"><span>蒙牛真果粒草莓味150ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
@@ -252,7 +252,7 @@
 					<input type="checkbox" name="checkbox"/>
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
+						<view class="spmc"><span>蒙牛真果粒草莓味350ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
@@ -318,13 +318,29 @@
 				//删除单个商品
 				$(".delete").each(function(e){
 					$(this).on("click",function(){
-						$("#spitem li").eq(0).remove();
+						$("#spitem li").eq(e).remove();
 						$.toast("删除成功");
 					})
 				})
-				//删除全部商品
+				//选删商品
 				$("#deleteAll").on("click",function(){
-					$("#spitem").html("");
+					var flag = false;
+					$("input[name='checkbox']").each(function(){
+						if($(this).prop('checked')){
+							flag=true;
+						}
+					})
+					if(flag){
+						$("input[name='checkbox']").each(function(){
+							if($(this).prop('checked')){
+								$(this).parent("li").remove();
+							}
+						})
+						$.toast("删除成功");
+					}else{
+						$.toast("选择要删除商品");
+					}
+					//$("#spitem").html("");
 				})
 				//全选
 				$("#selectall").on("click",function(){
@@ -333,14 +349,12 @@
 					}else{
 						$("input[name='checkbox']").prop("checked",false)
 					}
-					
 				})
 				//单选
 				$("input[name='checkbox']").each(function(){
 					$(this).on("click",function(){
 						var flag = true;
 						$("input[name='checkbox']").each(function(){
-							console.log($(this).prop('checked'));
 							if(!$(this).prop('checked')){
 								flag=false;
 							}
