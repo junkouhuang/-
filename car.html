@@ -328,11 +328,16 @@
 				$(".delete").each(function(e) {
 					$(this).on("click", function() {
 						console.log(e);
-						$("#spitem li").eq(e).remove();
+						$(this).parents("li").remove();
 						$.toast("删除成功");
 						if($("#spitem li").length == 0) {
-							var html = "<li><i class='iconfont icon-gouwuchekongkongruye'></i><li>"
-							$("#spitem").innerHTML(html)
+							var html = "<li class='empty'><i class='iconfont icon-gouwuchekongkongruye'></i></li>"
+							$("#spitem").html(html)
+							$("#editor").css("display", "block")
+							$("#finsh").css("display", "none")
+							$("#pay").css("display", "block")
+							$("#deleteAll").css("display", "none")
+							$("#selectall").find("input").prop('checked', false)
 						}
 					})
 
@@ -359,11 +364,11 @@
 							$("#finsh").css("display", "none")
 							$("#pay").css("display", "block")
 							$("#deleteAll").css("display", "none")
+							$("#selectall").find("input").prop('checked', false)
 						}
 					} else {
 						$.toast("选择要删除商品");
 					}
-					//$("#spitem").html("");
 				})
 				//全选
 				$("#selectall").on("click", function() {
