@@ -32,7 +32,7 @@
 				width: 100%;
 			}
 			
-			header #finsh{
+			header #finsh {
 				display: none;
 			}
 			
@@ -44,6 +44,15 @@
 			.scroll {
 				padding-top: 2rem;
 				padding-bottom: 2rem;
+			}
+			
+			.scroll ul .empty {
+				border-bottom: none;
+			}
+			
+			.scroll ul .empty i {
+				margin: auto;
+				font-size: 2rem;
 			}
 			
 			.scroll ul li {
@@ -66,7 +75,7 @@
 				height: 1.5rem;
 			}
 			
-			.scroll ul li .item .spmc .delete{
+			.scroll ul li .item .spmc .delete {
 				display: none;
 			}
 			
@@ -183,7 +192,7 @@
 				background-color: red;
 			}
 			
-			footer  #deleteAll{
+			footer #deleteAll {
 				display: none;
 			}
 			/** 底部导航 **/
@@ -217,7 +226,7 @@
 		<div class="scroll">
 			<ul id="spitem">
 				<li>
-					<input type="checkbox" name="checkbox"/>
+					<input type="checkbox" name="checkbox" />
 					<img src="img/img1.jpg" />
 					<div class="item">
 						<view class="spmc"><span>蒙牛真果粒草莓味150ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
@@ -233,7 +242,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" name="checkbox"/>
+					<input type="checkbox" name="checkbox" />
 					<img src="img/img1.jpg" />
 					<div class="item">
 						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
@@ -249,7 +258,7 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" name="checkbox"/>
+					<input type="checkbox" name="checkbox" />
 					<img src="img/img1.jpg" />
 					<div class="item">
 						<view class="spmc"><span>蒙牛真果粒草莓味350ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
@@ -299,70 +308,84 @@
 		<script type='text/javascript' src="js/sm.min.js" charset='utf-8'></script>
 		<!-- 自定义js -->
 		<script>
-			$(function(){
+			$(function() {
 				//编辑
-				$("#editor").on("click",function(){
-					$(this).css("display","none");
-					$("#finsh").css("display","block")
-					$(".delete").css("display","block")
-					$("#pay").css("display","none")
-					$("#deleteAll").css("display","block")
+				$("#editor").on("click", function() {
+					$(this).css("display", "none");
+					$("#finsh").css("display", "block")
+					$(".delete").css("display", "block")
+					$("#pay").css("display", "none")
+					$("#deleteAll").css("display", "block")
 				})
-				$("#finsh").on("click",function(){
-					$(this).css("display","none");
-					$("#editor").css("display","block")
-					$(".delete").css("display","none")
-					$("#pay").css("display","block")
-					$("#deleteAll").css("display","none")
+				$("#finsh").on("click", function() {
+					$(this).css("display", "none");
+					$("#editor").css("display", "block")
+					$(".delete").css("display", "none")
+					$("#pay").css("display", "block")
+					$("#deleteAll").css("display", "none")
 				})
 				//删除单个商品
-				$(".delete").each(function(e){
-					$(this).on("click",function(){
+				$(".delete").each(function(e) {
+					$(this).on("click", function() {
+						console.log(e);
 						$("#spitem li").eq(e).remove();
 						$.toast("删除成功");
-					})
-				})
-				//选删商品
-				$("#deleteAll").on("click",function(){
-					var flag = false;
-					$("input[name='checkbox']").each(function(){
-						if($(this).prop('checked')){
-							flag=true;
+						if($("#spitem li").length == 0) {
+							var html = "<li><i class='iconfont icon-gouwuchekongkongruye'></i><li>"
+							$("#spitem").innerHTML(html)
 						}
 					})
-					if(flag){
-						$("input[name='checkbox']").each(function(){
-							if($(this).prop('checked')){
+
+				})
+				//选删商品
+				$("#deleteAll").on("click", function() {
+					var flag = false;
+					$("input[name='checkbox']").each(function() {
+						if($(this).prop('checked')) {
+							flag = true;
+						}
+					})
+					if(flag) {
+						$("input[name='checkbox']").each(function() {
+							if($(this).prop('checked')) {
 								$(this).parent("li").remove();
 							}
 						})
 						$.toast("删除成功");
-					}else{
+						if($("#spitem li").length == 0) {
+							var html = "<li class='empty'><i class='iconfont icon-gouwuchekongkongruye'></i></li>"
+							$("#spitem").html(html)
+							$("#editor").css("display", "block")
+							$("#finsh").css("display", "none")
+							$("#pay").css("display", "block")
+							$("#deleteAll").css("display", "none")
+						}
+					} else {
 						$.toast("选择要删除商品");
 					}
 					//$("#spitem").html("");
 				})
 				//全选
-				$("#selectall").on("click",function(){
-					if($(this).find("input").prop('checked')){
-						$("input[name='checkbox']").prop("checked",true)
-					}else{
-						$("input[name='checkbox']").prop("checked",false)
+				$("#selectall").on("click", function() {
+					if($(this).find("input").prop('checked')) {
+						$("input[name='checkbox']").prop("checked", true)
+					} else {
+						$("input[name='checkbox']").prop("checked", false)
 					}
 				})
 				//单选
-				$("input[name='checkbox']").each(function(){
-					$(this).on("click",function(){
+				$("input[name='checkbox']").each(function() {
+					$(this).on("click", function() {
 						var flag = true;
-						$("input[name='checkbox']").each(function(){
-							if(!$(this).prop('checked')){
-								flag=false;
+						$("input[name='checkbox']").each(function() {
+							if(!$(this).prop('checked')) {
+								flag = false;
 							}
 						})
-						if(flag){
-							$("#selectall").find("input").prop("checked",true)
-						}else{
-							$("#selectall").find("input").prop("checked",false)
+						if(flag) {
+							$("#selectall").find("input").prop("checked", true)
+						} else {
+							$("#selectall").find("input").prop("checked", false)
 						}
 					})
 				})
