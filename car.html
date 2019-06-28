@@ -6,12 +6,11 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<title>购物车</title>
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1">
-		<link rel="shortcut icon" href="/favicon.ico">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<!-- sui基础样式 -->
 		<link rel="stylesheet" href="css/sm.min.css">
-		<!-- 自定义样式 -->
+		<!-- 自定义图标样式 -->
 		<link type="text/css" rel="stylesheet" charset="UTF-8" href="css/iconfont.css" />
 		<style type="text/css">
 			* {
@@ -252,7 +251,7 @@
 			</ul>
 		</div>
 		<footer>
-			<label>全选<input type="checkbox"/></label>
+			<label id="selectall">全选<input type="checkbox"/></label>
 			<div class="total">总价：<span>￥560</span></div>
 			<div class="btn">
 				<button>立即支付</button>
@@ -279,10 +278,20 @@
 		<!-- sui基础库 -->
 		<script type='text/javascript' src="js/zepto.min.js.js" charset='utf-8'></script>
 		<script type='text/javascript' src="js/sm.min.js" charset='utf-8'></script>
-		<!-- swiper轮播插件 -->
-		<script type='text/javascript' src="js/swiper.min.js" charset='utf-8'></script>
 		<!-- 自定义js -->
 		<script>
+			$(function(){
+				$("#selectall").on("click",function(){
+					if($(this).find("input[type='checkbox']").prop('checked')){
+						$(this).find("input[type='checkbox']").prop("checked",false)
+						$("input[type='checkbox']").prop("checked",true)
+					}else{
+						$(this).find("input[type='checkbox']").prop("checked",true)
+						$("input[type='checkbox']").prop("checked",false)
+					}
+					
+				})
+			})
 		</script>
 	</body>
 
