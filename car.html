@@ -32,6 +32,10 @@
 				width: 100%;
 			}
 			
+			header #finsh{
+				display: none;
+			}
+			
 			header i {
 				font-size: .8rem!important;
 			}
@@ -59,6 +63,11 @@
 			
 			.scroll ul li .item .spmc {
 				display: flex;
+				height: 1.5rem;
+			}
+			
+			.scroll ul li .item .spmc .delete{
+				display: none;
 			}
 			
 			.scroll ul li .item .spmc span:first-child {
@@ -195,16 +204,22 @@
 
 	<body>
 		<header>
-			<span>编辑</span>
-			<i class="iconfont icon-bianji"></i>
+			<label id="editor">
+				<span >编辑</span>
+				<i class="iconfont icon-bianji"></i>
+			</label>
+			<label id="finsh">
+				<span >完成</span>
+				<i class="iconfont icon-baocun"></i>
+			</label>
 		</header>
 		<div class="scroll">
 			<ul>
 				<li>
-					<input type="checkbox" />
+					<input type="checkbox" name="checkbox"/>
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span><i class="iconfont icon-shanchu"></i></span></view>
+						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
@@ -217,10 +232,10 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" />
+					<input type="checkbox" name="checkbox"/>
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span><i class="iconfont icon-shanchu"></i></span></view>
+						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
@@ -233,10 +248,10 @@
 					</div>
 				</li>
 				<li>
-					<input type="checkbox" />
+					<input type="checkbox" name="checkbox"/>
 					<img src="img/img1.jpg" />
 					<div class="item">
-						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span><i class="iconfont icon-shanchu"></i></span></view>
+						<view class="spmc"><span>蒙牛真果粒草莓味250ml</span><span class="delete"><i class="iconfont icon-shanchu"></i></span></view>
 						<p>1*12瓶</p>
 						<div class="sl">
 							<span class="price">￥120.00</span>
@@ -281,15 +296,42 @@
 		<!-- 自定义js -->
 		<script>
 			$(function(){
+				//编辑
+				$("#editor").on("click",function(){
+					$(this).css("display","none");
+					$("#finsh").css("display","block")
+					$(".delete").css("display","block")
+				})
+				$("#finsh").on("click",function(){
+					$(this).css("display","none");
+					$("#editor").css("display","block")
+					$(".delete").css("display","none")
+				})
+				//全选
 				$("#selectall").on("click",function(){
-					if($(this).find("input[type='checkbox']").prop('checked')){
-						$(this).find("input[type='checkbox']").prop("checked",false)
-						$("input[type='checkbox']").prop("checked",true)
+					if($(this).find("input").prop('checked')){
+						$("input[name='checkbox']").prop("checked",true)
 					}else{
-						$(this).find("input[type='checkbox']").prop("checked",true)
-						$("input[type='checkbox']").prop("checked",false)
+						$("input[name='checkbox']").prop("checked",false)
 					}
 					
+				})
+				//单选
+				$("input[name='checkbox']").each(function(){
+					$(this).on("click",function(){
+						var flag = true;
+						$("input[name='checkbox']").each(function(){
+							console.log($(this).prop('checked'));
+							if(!$(this).prop('checked')){
+								flag=false;
+							}
+						})
+						if(flag){
+							$("#selectall").find("input").prop("checked",true)
+						}else{
+							$("#selectall").find("input").prop("checked",false)
+						}
+					})
 				})
 			})
 		</script>
