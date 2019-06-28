@@ -178,12 +178,13 @@
 			footer .btn button {
 				padding: .2rem .5rem;
 				border-radius: 30px;
-			}
-			
-			footer .btn button {
 				border: 1px solid red;
 				color: #fff;
 				background-color: red;
+			}
+			
+			footer  #deleteAll{
+				display: none;
 			}
 			/** 底部导航 **/
 			
@@ -214,7 +215,7 @@
 			</label>
 		</header>
 		<div class="scroll">
-			<ul>
+			<ul id="spitem">
 				<li>
 					<input type="checkbox" name="checkbox"/>
 					<img src="img/img1.jpg" />
@@ -268,8 +269,11 @@
 		<footer>
 			<label id="selectall">全选<input type="checkbox"/></label>
 			<div class="total">总价：<span>￥560</span></div>
-			<div class="btn">
+			<div class="btn" id="pay">
 				<button>立即支付</button>
+			</div>
+			<div class="btn" id="deleteAll">
+				<button>删 除</button>
 			</div>
 		</footer>
 		<nav class="bar bar-tab">
@@ -301,11 +305,25 @@
 					$(this).css("display","none");
 					$("#finsh").css("display","block")
 					$(".delete").css("display","block")
+					$("#pay").css("display","none")
+					$("#deleteAll").css("display","block")
 				})
 				$("#finsh").on("click",function(){
 					$(this).css("display","none");
 					$("#editor").css("display","block")
 					$(".delete").css("display","none")
+					$("#pay").css("display","block")
+					$("#deleteAll").css("display","none")
+				})
+				//删除单个商品
+				$(".delete").each(function(){
+					$(this).on("click",function(){
+						
+					})
+				})
+				//删除全部商品
+				$("deleteAll").on("click",function(){
+					$("#spitem").html("");
 				})
 				//全选
 				$("#selectall").on("click",function(){
