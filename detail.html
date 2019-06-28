@@ -114,8 +114,10 @@
 				padding: .5rem;
 				margin-bottom: 3rem;
 			}
+			
 			.detail p {
-				margin: 0;			}
+				margin: 0;
+			}
 			/** 底部按钮 **/
 			
 			footer {
@@ -155,10 +157,12 @@
 				background-color: red;
 			}
 			/** 提示框 **/
-			.modal{
+			
+			.modal {
 				position: fixed;
 			}
-			.modal-overlay{
+			
+			.modal-overlay {
 				position: fixed;
 			}
 		</style>
@@ -208,7 +212,7 @@
 		<script>
 			$(function() {
 				//单位
-				$("#dw span").on("click",function(){
+				$("#dw span").on("click", function() {
 					$("#dw span").removeClass("active");
 					$(this).addClass("active");
 					$("#sl").val(0)
@@ -229,22 +233,22 @@
 					$("#choose").text(sl + $("#dw .active").text())
 				})
 				$("#sl").on("keyup", function() {
-					sl=$("#sl").val();
-					if(sl==""){
+					sl = $("#sl").val();
+					if(sl == "") {
 						$("#sl").val(0)
 						$("#choose").text(0 + $("#dw .active").text())
-					}else{
+					} else {
 						sl = parseInt(sl);
 						$("#sl").val(sl)
 						$("#choose").text(sl + $("#dw .active").text())
 					}
 				})
 				//加入购物车
-				$("#tocar").on("click",function(){
+				$("#tocar").on("click", function() {
 					$.showPreloader('正在跳转...')
 				})
 				//支付
-				$("#pay").on("click",function(){
+				$("#pay").on("click", function() {
 					$.showPreloader('正在跳转...')
 				})
 			})
