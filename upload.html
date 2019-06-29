@@ -47,6 +47,7 @@
 			table tr td input {
 				border: none;
 				padding: .2rem 1rem;
+				width: 14rem;
 			}
 			
 			table tr td select{
@@ -73,6 +74,22 @@
 				line-height: 2rem;
 			}
 		</style>
+		<style>
+			#clipArea {
+				margin: 0px;
+				width: 16rem;
+				height: 300px;
+			}
+			#file,
+			#clipBtn {
+				/*margin: 20px;*/
+			}
+			#view {
+				margin: 0 auto;
+				width: 200px;
+				height: 200px;
+			}
+			</style>
 	</head>
 
 	<body>
@@ -95,9 +112,13 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
-							<p>图片</p>
-							<input type="file" name="imageFile" class="fupPhoto" />
+						<td class="img">
+							<article class="zzsc-container">
+								<div id="clipArea"></div>
+								<input type="file" id="file">
+								<button id="clipBtn">截取</button>
+								<div id="view"></div>
+							</article>
 						</td>
 					</tr>
 					<tr>
@@ -111,7 +132,28 @@
 		<!-- sui基础库 -->
 		<script type='text/javascript' src="js/zepto.min.js.js" charset='utf-8'></script>
 		<script type='text/javascript' src="js/sm.min.js" charset='utf-8'></script>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+		<script src="js/iscroll-zoom.js"></script>
+		<script src="js/hammer.js"></script>
+		<script src="js/jquery.photoClip.js"></script>
 		<script>
+		//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+		$("#clipArea").photoClip({
+			width: 200,
+			height: 200,
+			file: "#file",
+			view: "#view",
+			ok: "#clipBtn",
+			loadStart: function() {
+				console.log("照片读取中");
+			},
+			loadComplete: function() {
+				console.log("照片读取完成");
+			},
+			clipFinish: function(dataURL) {
+				console.log(dataURL);
+			}
+		});
 		</script>
 	</body>
 
