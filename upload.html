@@ -108,7 +108,7 @@
 
 	<body>
 		<div class="upload">
-			<form action="https://me.csdn.net/api/user/uploadBase64Avatar" method="post" enctype="multipart/form-data">
+			<form  enctype="multipart/form-data">
 				<table>
 					<tr>
 						<td>
@@ -132,7 +132,7 @@
 								<div id="clipArea"></div>
 								<div class="choose">
 									<input type="file" id="file">
-									<button id="clipBtn">截 取</button>
+									<button id="clipBtn" type="button">截 取</button>
 								</div>
 								<div id="view"></div>
 							</article>
@@ -140,7 +140,7 @@
 					</tr>
 					<tr>
 						<td>
-							<button type="submit" id="submit"  class="submit" >提交</button>
+							<button id="submit" type="button" class="submit" >提交</button>
 						</td>
 					</tr>
 				</table>
