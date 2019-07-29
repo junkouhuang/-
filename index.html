@@ -82,6 +82,11 @@
 				font-size: .7rem;
 			}
 			
+			.content .card-img div {
+				width: 100%;
+				background-size: cover!important;
+			}
+			
 			.contents .card-content span {
 				color: #333;
 			}
@@ -287,6 +292,9 @@
 		<script type='text/javascript' src="js/swiper.min.js" charset='utf-8'></script>
 		<!-- 自定义js -->
 		<script>
+			$(function(){
+				$(".card-img>div").height(document.body.clientWidth * 0.4)
+			})
 			//首页轮播（1）
 			var swiper = new Swiper('.swiper-container', {
 				autoplay: {
@@ -319,7 +327,7 @@
 					html += '<a href="detail.html">';
 					html += '<div class="cards">'
 					html += '<div class="card-img">'
-					html += '<img src="img/img1.jpg" alt="">'
+					html += '<div style="background:url(img/img1.jpg)"></div>'
 					html += '</div>'
 					html += '<div class="card-content">'
 					html += '<span>蒙牛真果粒草莓味250ml </span>'
