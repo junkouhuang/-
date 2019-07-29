@@ -111,7 +111,8 @@
 			}
 			
 			.content-padded {
-				margin: .5rem;
+				margin: 0;
+				padding: 0;
 			}
 			/** 列表样式 **/
 			
@@ -157,6 +158,8 @@
 				margin-bottom: 10px;
 				width: 47%!important;
 				margin-left: 3%!important;
+				float: left;
+				list-style: none;
 			}
 			
 			.tw a {
@@ -248,11 +251,11 @@
 			</div>
 			<div class="contents">
 				<!-- 这里是页面内容区 -->
-				<div class="content-padded tw" id="itemlist">
+				<ul class="content-padded tw" id="itemlist">
 					<!-- 行 -->
 
 					<!-- 行end -->
-				</div>
+				</ul>
 				<!-- 加载提示符 -->
 				<div class="infinite-scroll-preloader infinite-scroll" data-distance="100">
 					<div class="preloader"></div>
@@ -312,8 +315,7 @@
 				// 生成新条目的HTML
 				var html = '';
 				for(var i = lastIndex + 1; i <= lastIndex + number; i++) {
-					html += '<div class="row">'
-					html += '<div class="col">'
+					html += '<li class="col">'
 					html += '<a href="detail.html">';
 					html += '<div class="cards">'
 					html += '<div class="card-img">'
@@ -326,22 +328,7 @@
 					html += '</div>'
 					html += '</div>'
 					html += '</a>';
-					html += '</div>'
-					html += '<div class="col">'
-					html += '<a href="detail.html">';
-					html += '<div class="cards">'
-					html += '<div class="card-img">'
-					html += '<img src="img/img1.jpg" alt="">'
-					html += '</div>'
-					html += '<div class="card-content">'
-					html += '<span>蒙牛真果粒草莓味250ml </span>'
-					html += '<p>1*12瓶 </p>'
-					html += '<div class="price"><span>￥120.00 </span><i class="iconfont icon-gouwuchekong-copy"></i></div>'
-					html += '</div>'
-					html += '</div>'
-					html += '</a>';
-					html += '</div>';
-					html += '</div>';
+					html += '</li>'
 				}
 				// 添加新条目
 				$('#itemlist').append(html);
